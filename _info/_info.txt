@@ -1,0 +1,30 @@
+nvm install latest   --> 24.3.0  // desde powershell una vez instalado el nvm.exe
+nvm use 24.3.0 // desde powershel
+
+npm create vite@latest react-redux-example 
+> react
+> ts
+
+npm install @reduxjs/toolkit react-redux
+
+
+///////////////////////////////////////////////////////////////////////////
+
+
+git init
+git add .
+git commit -m "creación repositorio"
+git remote add origin https://github.com/MauricioBarriosB/react-redux.git
+git push -f -u origin main
+
+///////////////////////////////////////////////////////////////////////////
+
+https://www.freecodecamp.org/espanol/news/como-usar-redux-en-reactjs-con-ejemplos-de-la-vida-cotidiana/
+
+Cuando trabajes con Redux, necesitarás tres cosas principales:
+
+acciones: Estos son objetos que deben tener dos propiedades, una que describe el tipo de acción y otra que describe lo que debe cambiarse en el estado de la aplicación.
+
+reductores: Son funciones que implementan el comportamiento de las acciones. Cambian el estado de la aplicación, según la descripción de la acción y la descripción del cambio de estado.
+
+almacén: Reúne las acciones y los reductores, mantiene y cambia el estado de toda la aplicación; solo hay un almacén.
