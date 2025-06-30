@@ -1,27 +1,17 @@
-import { useDispatch, useSelector } from 'react-redux';
-import type { RootState } from './store';
-import { increment, decrement, setCount } from './features/counterSlice';
+import ProductList from './components/ProductList';
+import Cart from './components/Cart';
+import Test from './components/Counter';
 
 function App() {
-    const count = useSelector((state: RootState) => state.counter.value);
-    const dispatch = useDispatch();
-
     return (
-        <div>
-            <h1>Global Counter: {count}</h1>
-            <button onClick={() => dispatch(increment())}>+</button>
-            <button onClick={() => dispatch(decrement())}>-</button>
-            <button onClick={() => dispatch(setCount(0))}>Reset</button>
-
-            <div>
-                <input
-                    type="number"
-                    value={count}
-                    onChange={(e) => dispatch(setCount(Number(e.target.value)))}
-                />
+        <div className="App">
+            <h1>Carro de Compras</h1>
+            <div style={{ display: 'flex' }}>
+                <div style={{ flex: 1 }}><ProductList /></div>
+                <div style={{ flex: 1 }}><Cart /></div>
             </div>
+            <Test/>
         </div>
     );
 }
-
 export default App;
